@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { SearchIcon, CloseIcon } from '../icons'
+import { SearchIcon} from '../icons'
 import { Search } from './Search'
 
 interface SearchButtonProps {

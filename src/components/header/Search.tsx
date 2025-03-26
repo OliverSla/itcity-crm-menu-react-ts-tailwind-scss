@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { SearchIcon, ForwardIcon, RightIcon } from '../icons'
+import { SearchIcon, RightIcon } from '../icons'
 import Link from 'next/link'
 
 interface SearchProps {

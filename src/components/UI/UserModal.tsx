@@ -107,10 +107,10 @@ export function UserModal({
 
         {/* Menu items */}
         <div className="grid grid-cols-4 gap-3 border-b border-gray-100 pb-6 dark:border-gray-700">
-          <MenuItem label="Kalkulačka" icon="/calculator-icon.svg" />
-          <MenuItem label="GPS" icon="/gps-icon.svg" />
-          <MenuItem label="Faktúra" icon="/invoice-icon.svg" />
-          <MenuItem label="Viac" icon="/more-icon.svg" />
+          <MenuItem label="Kalkulačka" />
+          <MenuItem label="GPS" />
+          <MenuItem label="Faktúra"  />
+          <MenuItem label="Viac"  />
         </div>
 
         {/* Options list */}
@@ -131,7 +131,7 @@ export function UserModal({
 }
 
 // Helper components
-function MenuItem({ label, icon }: { label: string; icon: string }) {
+function MenuItem({ label, }: { label: string;  }) {
   return (
     <div className="flex flex-col items-center gap-2">
       <div className="h-[48px] w-[48px] rounded-md bg-gray-200 p-3 dark:bg-gray-700">
