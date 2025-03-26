@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animácie pre modálne okná */
+.show-animation {
+  animation: slideUp 0.3s ease-out forwards;
+}
+
+.hide-animation {
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+/* Ease funkcie */
+.ease-easeOutSine {
+  transition-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+}

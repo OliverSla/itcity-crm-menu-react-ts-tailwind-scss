@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-inter text-black;
+  }
+}
+
+@layer components {
+  /* Text Styles */
+  .text-link {
+    @apply font-inter font-regular ;
+  }
+
+  .text-input {
+    @apply font-inter font-regular ;
+  }
+
+  .text-button-small {
+    @apply font-inter font-regular text-button-s;
+  }
+
+  .text-button-medium {
+    @apply font-inter font-regular text-button-m;
+  }
+
+  .text-button-large {
+    @apply font-inter font-regular text-button-l;
+  }
+
+  /* Mobile Menu */
+  .menu-main {
+    @apply font-inter font-semibold ;
+  }
+
+  .menu-profile {
+    @apply font-inter font-regular ;
+  }
+
+  .menu-float {
+    @apply font-inter font-regular ;
+  }
+
+  .menu-title {
+    @apply font-inter font-semibold ;
+  }
+
+  /* Desktop Menu */
+  .menu-desktop-top {
+    @apply font-inter font-regular text-desktop-menu-top ;
+  }
+
+  .menu-desktop-top-active {
+    @apply font-inter font-regular text-desktop-menu-top ;
+  }
+
+  .menu-desktop-float {
+    @apply font-inter font-regular;
+  }
+
+  .menu-desktop-mega-title {
+    @apply font-inter font-semibold;
+  }
+
+  .menu-desktop-mega-list {
+    @apply font-inter font-regular ;
+  }
+
+  .menu-desktop-search {
+    @apply font-inter font-regular ;
+  }
+
+  /* Animations */
+
+  
+.show-animation {
+  transform: translateY(0);
+}
+
+.hide-animation {
+  transform: translateY(100%);
+}
+
+/* Na väčších obrazovkách (sm breakpoint) */
+@media (min-width: 640px) {
+  .show-animation {
+    transform: translateX(0);
+  }
+  
+  .hide-animation {
+    transform: translateX(100%);
+  }
+}
+
+}
