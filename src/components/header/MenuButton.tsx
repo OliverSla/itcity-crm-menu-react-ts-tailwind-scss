@@ -65,7 +65,7 @@ export function MenuButton({ className = '' }: MenuButtonProps) {
               <Link
                 key={item.id}
                 href={item.link}
-                className="flex items-center justify-between px-4 py-4 text-base text-gray-600 dark:text-gray-300 
+                className="flex items-center justify-between px-4 py-3 text-base text-gray-600 dark:text-gray-300 
                   hover:bg-gray-50 dark:hover:bg-gray-800/50"
                 onClick={toggleMenu}
               >
@@ -81,7 +81,7 @@ export function MenuButton({ className = '' }: MenuButtonProps) {
               <Link
                 key={item.id}
                 href={item.link}
-                className="flex items-center justify-between px-4 py-4 text-base text-gray-600 dark:text-gray-300 
+                className="flex items-center justify-between px-4 py-3 text-base text-gray-600 dark:text-gray-300 
                   hover:bg-gray-50 dark:hover:bg-gray-800/50"
                 onClick={toggleMenu}
               >

@@ -45,6 +45,7 @@ export function UserModal({
   }
 
 
+
   if (!isOpen && !isAnimating) return null
 
   return (
