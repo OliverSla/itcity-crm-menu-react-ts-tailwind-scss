@@ -45,7 +45,7 @@ const menuItems: MenuItem[] = [
 
 export function GridModal({ isOpen, onClose }: GridModalProps) {
   const [isAnimating, setIsAnimating] = useState(false)
-  const ANIMATION_DURATION = 300 // v milisekundách - tento čas by mal zodpovedať CSS transition duration
+  const ANIMATION_DURATION = 300 
 
   useEffect(() => {
     if (isOpen) {
@@ -59,9 +59,7 @@ export function GridModal({ isOpen, onClose }: GridModalProps) {
   }, [isOpen])
 
   const handleClose = () => {
-    // Najprv označíme, že sa má animovať zatvorenie
     setIsAnimating(false)
-    // Potom počkáme na dokončenie animácie pred skutočným zatvorením
     setTimeout(onClose, ANIMATION_DURATION)
   }
 

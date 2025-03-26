@@ -1,8 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
 import MenuNavigationItems from '../UI/MenuNavigationItems'
 import { HeaderActions } from '@/components/header'
 
@@ -19,7 +17,6 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({
 }) => {
   const [isSearchActive, setIsSearchActive] = useState(false)
   const [isProfileOpen, setIsProfileOpen] = useState(false)
-  const [isNotificationsOpen, setIsNotificationsOpen] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (

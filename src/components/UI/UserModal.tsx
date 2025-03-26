@@ -18,13 +18,13 @@ export function UserModal({
   userImage = '/images/ProfileUser.png'
 }: UserModalProps) {
   const [isAnimating, setIsAnimating] = useState(false)
-  const ANIMATION_DURATION = 300 // v milisekundách - tento čas by mal zodpovedať CSS transition duration
+  const ANIMATION_DURATION = 300 
 
   useEffect(() => {
     if (isOpen) {
       const timer = setTimeout(() => {
         setIsAnimating(true)
-      }, 0) // Malé oneskorenie pre lepšie načasovanie animácie
+      }, 0) 
       return () => clearTimeout(timer)
     } else {
       setIsAnimating(false)
@@ -32,9 +32,7 @@ export function UserModal({
   }, [isOpen])
 
   const handleClose = () => {
-    // Najprv označíme, že sa má animovať zatvorenie
     setIsAnimating(false)
-    // Potom počkáme na dokončenie animácie pred skutočným zatvorením
     setTimeout(onClose, ANIMATION_DURATION)
   }
 
