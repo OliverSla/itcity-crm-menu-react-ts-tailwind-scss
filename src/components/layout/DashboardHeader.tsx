@@ -3,18 +3,12 @@
 import React, { useState } from 'react'
 import MenuNavigationItems from '../UI/MenuNavigationItems'
 import { HeaderActions } from '@/components/header'
+import Image from 'next/image'
 
-interface DashboardHeaderProps {
-  userName?: string
-  userAvatar?: string
-  notificationCount?: number
-}
 
-const DashboardHeader: React.FC<DashboardHeaderProps> = ({
-  userName = 'User Name',
-  userAvatar = '/avatar-placeholder.png',
-  notificationCount = 0
-}) => {
+
+const DashboardHeader = () => {
+
   const [isSearchActive, setIsSearchActive] = useState(false)
   const [isProfileOpen, setIsProfileOpen] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -25,7 +19,7 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({
         <div className="flex items-center justify-between px-[16px]">
           <div className="flex items-center gap-[40px]">
             <div className="flex shrink-0">
-              <img src="/logo/itcity_logo_icon.svg" alt="ITCity Logo" />
+              <Image src="/logo/itcity_logo_icon.svg" alt="ITCity Logo" width={27} height={24} />
             </div>
             <MenuNavigationItems />
           </div>

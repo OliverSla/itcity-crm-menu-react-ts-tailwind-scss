@@ -10,42 +10,27 @@ interface MenuItem {
   label: string
   items: {
     label: string
-    icon: string
   }[]
 }
 
 const menuItems: MenuItem[] = [
   {
     label: 'Projekty',
-    items: [
-      { label: 'ITcity', icon: '' },
-      { label: 'Kukajse', icon: '' },
-      { label: 'Option', icon: '' }
-    ]
+    items: [{ label: 'ITcity' }, { label: 'Kukajse' }, { label: 'Option' }]
   },
   {
     label: 'Aplikácie zdarma',
-    items: [
-      { label: 'Kalkulačka', icon: '/calculator-icon.svg' },
-      { label: 'GPS', icon: '/gps-icon.svg' },
-      { label: 'Faktúra', icon: '/invoice-icon.svg' },
-      { label: 'Viac', icon: '/more-icon.svg' }
-    ]
+    items: [{ label: 'Kalkulačka' }, { label: 'GPS' }, { label: 'Faktúra' }, { label: 'Viac' }]
   },
   {
     label: 'Platené aplikácie',
-    items: [
-      { label: 'Kalkulačka', icon: '/calculator-icon.svg' },
-      { label: 'GPS', icon: '/gps-icon.svg' },
-      { label: 'Faktúra', icon: '/invoice-icon.svg' },
-      { label: 'Viac', icon: '/more-icon.svg' }
-    ]
+    items: [{ label: 'Kalkulačka' }, { label: 'GPS' }, { label: 'Faktúra' }, { label: 'Viac' }]
   }
 ]
 
 export function GridModal({ isOpen, onClose }: GridModalProps) {
   const [isAnimating, setIsAnimating] = useState(false)
-  const ANIMATION_DURATION = 300 
+  const ANIMATION_DURATION = 300
 
   useEffect(() => {
     if (isOpen) {
@@ -102,7 +87,9 @@ export function GridModal({ isOpen, onClose }: GridModalProps) {
                   key={index}
                   className="flex w-full items-center justify-between px-2 py-[8px] text-left hover:bg-gray-50 dark:hover:bg-gray-800"
                 >
-                  <span className="text-user-modal-profile-option-text text-gray-500 dark:text-gray-400">{item.label}</span>
+                  <span className="text-user-modal-profile-option-text text-gray-500 dark:text-gray-400">
+                    {item.label}
+                  </span>
                   <ForwardIcon size={16} className="text-gray-400" />
                 </button>
               ))}
@@ -114,7 +101,7 @@ export function GridModal({ isOpen, onClose }: GridModalProps) {
             <h2 className="text-sm font-medium text-gray-900 dark:text-gray-400 mb-5">{menuItems[1].label}</h2>
             <div className="grid grid-cols-4 gap-3">
               {menuItems[1].items.map((item, index) => (
-                <MenuItem key={index} label={item.label} icon={item.icon} />
+                <MenuItem key={index} label={item.label}  />
               ))}
             </div>
           </div>
@@ -124,7 +111,7 @@ export function GridModal({ isOpen, onClose }: GridModalProps) {
             <h2 className="text-sm font-medium text-gray-900 dark:text-gray-400 mb-5">{menuItems[2].label}</h2>
             <div className="grid grid-cols-4 gap-3">
               {menuItems[2].items.map((item, index) => (
-                <MenuItem key={index} label={item.label} icon={item.icon} />
+                <MenuItem key={index} label={item.label}  />
               ))}
             </div>
           </div>
@@ -135,7 +122,7 @@ export function GridModal({ isOpen, onClose }: GridModalProps) {
 }
 
 // Helper components
-function MenuItem({ label, icon }: { label: string; icon: string }) {
+function MenuItem({ label }: { label: string; }) {
   return (
     <div className="flex flex-col items-center gap-2">
       <div className="h-[48px] w-[48px] rounded-md bg-gray-200 p-3 dark:bg-gray-700">
